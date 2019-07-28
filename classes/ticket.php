@@ -8,11 +8,7 @@ class Ticket
         $this->pdo = $pdo->connect();
     }
 
-    public function getPDO()
-    {
-        return $this->pdo;
-    }
-
+    // function for the random unique string
     function getUStr()
     {
         $length = 6;
@@ -28,6 +24,7 @@ class Ticket
         return $token;
     }
 
+    // test input data for hack commands
     public function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -35,6 +32,7 @@ class Ticket
         return $data;
     }
 
+    // only allow letters and space for subject
     public function formSubjectValidate($subject)
     {
         if (!preg_match("/^[a-zA-Z ]*$/", $subject)) {
