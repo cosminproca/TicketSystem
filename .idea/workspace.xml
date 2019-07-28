@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d0f5975-5c50-40b7-87f7-297e861b9c43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/classes/reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/ticket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,16 +53,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/ticket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="280">
+              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/reply.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -115,8 +114,8 @@
         <option value="$PROJECT_DIR$/list.php" />
         <option value="$PROJECT_DIR$/view.php" />
         <option value="$PROJECT_DIR$/controller.php" />
-        <option value="$PROJECT_DIR$/classes/ticket.php" />
         <option value="$PROJECT_DIR$/classes/reply.php" />
+        <option value="$PROJECT_DIR$/classes/ticket.php" />
       </list>
     </option>
   </component>
@@ -131,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="266" />
     <option name="y" value="62" />
     <option name="width" value="1392" />
@@ -211,12 +210,12 @@
       <workItem from="1564155125879" duration="271000" />
       <workItem from="1564157707871" duration="2219000" />
       <workItem from="1564214733097" duration="34554000" />
-      <workItem from="1564296058212" duration="30790000" />
+      <workItem from="1564296058212" duration="31247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138922000" />
+    <option name="totallyTimeSpent" value="139379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="266" y="62" width="1392" height="937" extended-state="0" />
@@ -311,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -346,10 +338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/ticket.php">
+    <entry file="file://$PROJECT_DIR$/classes/request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -357,6 +349,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
         </state>
       </provider>
     </entry>

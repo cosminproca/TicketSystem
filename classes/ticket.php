@@ -32,11 +32,11 @@ class Ticket
         return $data;
     }
 
-    // only allow letters and space for subject
+    // only allow letters, numbers and white space for subject
     public function formSubjectValidate($subject)
     {
-        if (!preg_match("/^[a-zA-Z ]*$/", $subject)) {
-            echo "<p class='alert alert-danger text-center'> Only letters and white space allowed on subject input.</p>";
+        if (!ctype_alnum($subject)) {
+            echo "<p class='alert alert-danger text-center'> Only letters, numbers and white space allowed on subject input.</p>";
             return null;
         }
         return $subject;
