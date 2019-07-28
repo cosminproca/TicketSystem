@@ -98,6 +98,13 @@
                     <p>Reference: {$_SESSION["reference"]} </p> 
                     </div> ";
                 unset($_SESSION["success"]);
+            } else {
+                echo "<br>";
+                echo "
+                    <div class='alert alert-danger' role='alert'>
+                    <h3 class='alert-heading text-center'>Form Validate Error. Please enter valid data.</h3>
+                    </div> ";
+                unset($_SESSION["success"]);
             }
         }
     }

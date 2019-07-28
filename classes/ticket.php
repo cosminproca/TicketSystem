@@ -28,20 +28,46 @@ class Ticket
         return $token;
     }
 
+    public function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    public function formSubjectValidate($subject)
+    {
+        if (!preg_match("/^[a-zA-Z ]*$/", $subject)) {
+            echo "<p class='alert alert-danger text-center'> Only letters and white space allowed on subject input.</p>";
+            return null;
+        }
+        return $subject;
+    }
+
     public function addTicket($newRequest)
     {
         $request = $newRequest;
-        $email = $request->getPost("email");
-        $department = $request->getPost("department");
-        $subject = $request->getPost("subject");
-        $tickettext = $request->getPost("tickettext");
-        $date = date('d/m/Y H:i');
-        $ref = $this->getUStr();
-        $sql = "INSERT INTO tickets (ref, email, department, subject, tickettext, date) 
+        $email = $department = $subject = $tickettext = null;
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email = $this->test_input($request->getPost("email"));
+            $department = $this->test_input($request->getPost("department"));
+            $subject = $this->test_input($request->getPost("subject"));
+            $tickettext = $this->test_input($request->getPost("tickettext"));
+        }
+
+        if($this->formSubjectValidate($subject) != null)
+        {
+            $date = date('d/m/Y H:i');
+            $ref = $this->getUStr();
+            $sql = "INSERT INTO tickets (ref, email, department, subject, tickettext, date) 
                     VALUES (?,?,?,?,?,?);";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$ref, $email, $department, $subject, $tickettext, $date]);
-        return $ref;
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$ref, $email, $department, $subject, $tickettext, $date]);
+            return $ref;
+        } else {
+            $_SESSION["success"] = false;
+        }
     }
 
     public function findByRef($reference)

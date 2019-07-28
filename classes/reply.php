@@ -8,10 +8,22 @@ class Reply
         $this->pdo = $pdo->connect();
     }
 
+    public function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     public function addReply($newRequest, $ref)
     {
         $request = $newRequest;
-        $text = $request->getPost("replytext");
+        $text = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $text = $this->test_input($request->getPost("replytext"));
+        }
+
         $sql = "INSERT INTO replies (ref, text) VALUES (?,?);";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$ref, $text]);
